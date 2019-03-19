@@ -1,0 +1,11 @@
+<div class="userListContainer">
+  <app-user-list [users]="userListArray">
+  </app-user-list>
+</div>
+
+<div class="userEditContainer">
+  <!-- Tar emot output från edit-users - kör addUser eller removeUser -->
+  <app-edit-users (userOutput)='addUser($event)' 
+  (userOutputRemove)='removeUser($event)'>
+  </app-edit-users>
+</div>
