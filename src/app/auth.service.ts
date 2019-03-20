@@ -16,6 +16,15 @@ login(a, b) {
 logout() {
   localStorage.removeItem('user');
 }
+checkIfLoggedIn() {
+  this.loggedUser = localStorage.getItem('user');
+   if (this.loggedUser == null) {
+     console.log('Inte inloggad!')
+   }
+   else {
+     console.log('inloggad som: ' + this.loggedUser);
+   }
+}
 }
 
 
