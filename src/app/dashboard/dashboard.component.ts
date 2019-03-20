@@ -8,10 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
   userListArray = [
-    {user: 'Leanne Graham'},
-    {user: 'Ervin Howell'},
-    {user: 'Clementine Bauch'},
-    {user: 'Patricia Lebsack'}
+    {user: 'Leanne'},
+    {user: 'Ervin'},
+    {user: 'Clementine'},
+    {user: 'Patricia'}
   ]
 
   constructor() { }

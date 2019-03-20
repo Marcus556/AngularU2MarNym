@@ -11,7 +11,7 @@ export class UserListComponent implements OnInit {
   /* Tar emot input med array userlist från dashboard */ 
   @Input() users: string[];
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
   }
