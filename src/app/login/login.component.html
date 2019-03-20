@@ -1,0 +1,10 @@
+<div class="row">
+  <div class="col-xs-4 col-xs-offset-4">
+    <div class="form">
+      <label>Please Login</label>
+      <input [(ngModel)]="userName" class="form-control" type="text">
+      <button (click)="authService.login('user', userName)" class="btn btn-success btn-sm">Login</button>
+      <button (click)="authService.logout()" class="btn btn-danger btn-sm">Logout</button>
+    </div>
+  </div>
+</div>
