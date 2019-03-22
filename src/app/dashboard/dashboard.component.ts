@@ -1,5 +1,6 @@
 /* Dashboard component som håller edit-users och userlist */
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -14,9 +15,10 @@ export class DashboardComponent implements OnInit {
     {user: 'Patricia'}
   ]
 
-  constructor() { }
+  constructor(private authService: AuthService) { }
 
   ngOnInit() {
+    this.authService.checkIfLoggedIn();
   }
 /* Tar emot output från edit-users och pushar in i arrayen userList */
 addUser(inData) {

@@ -13,7 +13,7 @@ export class UserListItemComponent implements OnInit {
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
-    let user = this.route.snapshot.paramMap.get('user');
+    const user = this.route.snapshot.paramMap.get('user');
   }
 
 }

@@ -1,10 +1,15 @@
 <div class="row">
   <div class="col-xs-12">
     <div class="form">
-      <label>Please Login</label>
-      <input [(ngModel)]="userName" class="form-control" type="text">
-      <button (click)="authService.login('user', userName)" class="btn btn-success btn-sm">Login</button>
-      <button (click)="authService.logout()" class="btn btn-danger btn-sm">Logout</button>
+      <div *ngIf="authService.loggedOn; else loggedOff">
+        <h2>You are already logged in!</h2>
+        <button (click)="authService.logout(); ngOnInit()" [routerLink]="['../login']" class="btn btn-danger btn-sm">Logout</button>
+      </div>
+      <ng-template #loggedOff>
+        <label>Please Login</label>
+        <input [(ngModel)]="userName" class="form-control" type="text">
+        <button (click)="authService.login('user', userName)" [routerLink]="['']"  class="btn btn-success btn-sm">Login</button>
+      </ng-template>  
     </div>
   </div>
 </div>

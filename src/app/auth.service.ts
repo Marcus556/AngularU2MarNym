@@ -5,6 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class AuthService {
   loggedUser: string;
+  loggedOn: boolean;
 
 
   constructor() { }
@@ -19,9 +20,11 @@ logout() {
 checkIfLoggedIn() {
   this.loggedUser = localStorage.getItem('user');
    if (this.loggedUser == null) {
+     this.loggedOn = false;
      console.log('Inte inloggad!')
    }
    else {
+     this.loggedOn = true;
      console.log('inloggad som: ' + this.loggedUser);
    }
 }

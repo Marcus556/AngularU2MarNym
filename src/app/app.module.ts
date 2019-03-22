@@ -12,7 +12,8 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { LoginComponent } from './login/login.component';
 import { AuthService } from './auth.service';
 import { SingleUserComponent } from './single-user/single-user.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component'
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { LogoutComponent } from './logout/logout.component'
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     LoginComponent,
     SingleUserComponent,
     PageNotFoundComponent,
+    LogoutComponent,
   ],
   imports: [
     AppRoutingModule,
