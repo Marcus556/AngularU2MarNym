@@ -13,7 +13,7 @@ import { LoginComponent } from './login/login.component';
 import { AuthService } from './auth.service';
 import { SingleUserComponent } from './single-user/single-user.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { LogoutComponent } from './logout/logout.component'
+
 
 @NgModule({
   declarations: [
@@ -26,7 +26,6 @@ import { LogoutComponent } from './logout/logout.component'
     LoginComponent,
     SingleUserComponent,
     PageNotFoundComponent,
-    LogoutComponent,
   ],
   imports: [
     AppRoutingModule,

@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ActivatedRoute } from '@angular/router'
 
 
 @Component({
@@ -10,10 +9,10 @@ import { ActivatedRoute } from '@angular/router'
 export class UserListItemComponent implements OnInit {
   @Input() user;
   @Input() textColor;
-  constructor(private route: ActivatedRoute) { }
+  constructor() { }
 
   ngOnInit() {
-    const user = this.route.snapshot.paramMap.get('user');
+
   }
 
 }

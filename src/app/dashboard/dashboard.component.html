@@ -1,3 +1,4 @@
+<!-- visar rätt innehåll beroende på om loggedOn är true eller false i authService.-->
 <div *ngIf="authService.loggedOn; else loggedOff">
   <div class="userListContainer">
     <app-user-list [users]="userListArray">

@@ -1,13 +1,17 @@
 <div class="row">
   <div class="col-xs-12">
     <div class="form">
+      <!-- ngIf kollar om loggedOn i authservice är true eller false och visar login eller logout -->
       <div *ngIf="authService.loggedOn; else loggedOff">
         <h2>You are already logged in!</h2>
-        <button (click)="authService.logout(); ngOnInit()" [routerLink]="['../login']" class="btn btn-danger btn-sm">Logout</button>
+        <!-- Kör logout() i authService och ngOnInit för att uppdatera komponenten 
+        ( Antar att det finns bättre sätt att göra det på, men detta verkade vara det enklaste sättet.) -->
+        <button (click)="authService.logout(); ngOnInit()" class="btn btn-danger btn-sm">Logout</button>
       </div>
       <ng-template #loggedOff>
         <label>Please Login</label>
         <input [(ngModel)]="userName" class="form-control" type="text">
+        <!-- Kör login() i authService och skickar med string "user" och angivet userName i input-fielden. -->
         <button (click)="authService.login('user', userName)" [routerLink]="['']"  class="btn btn-success btn-sm">Login</button>
       </ng-template>  
     </div>

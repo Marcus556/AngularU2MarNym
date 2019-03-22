@@ -16,7 +16,7 @@ export class DashboardComponent implements OnInit {
   ]
 
   constructor(private authService: AuthService) { }
-
+/* Kör checkIfLoggedIn() i authService när komponenten laddas */
   ngOnInit() {
     this.authService.checkIfLoggedIn();
   }

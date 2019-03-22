@@ -16,9 +16,5 @@ export class LoginComponent implements OnInit {
     this.authService.checkIfLoggedIn();
   }
 
-  lgo() {
-    this.ngOnInit();
-    this.authService.logout();
-  }
 
 }
